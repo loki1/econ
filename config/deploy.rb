@@ -4,13 +4,13 @@ default_run_options[:pty] = true
 
 # be sure to change these
 set :user, 'deployer'
-# set :password, 'helloworld'
-set :domain, 'econ'
+
+set :domain, 'domowodstvo.ru'
 set :application, 'econ'
 
 # the rest should be good
 set :repository,  "git@github.com:loki1/econ.git" 
-set :deploy_to, "/home/#{user}/#{domain}"
+set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :scm, 'git'
 set :branch, 'master'
