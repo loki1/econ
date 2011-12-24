@@ -9,7 +9,7 @@ set :domain, 'econ'
 set :application, 'econ'
 
 # the rest should be good
-set :repository,  "deployer@domowodstvo.ru:/opt/projects/econ.git" 
+set :repository,  "git@github.com:loki1/econ.git" 
 set :deploy_to, "/home/#{user}/#{domain}"
 set :deploy_via, :remote_cache
 set :scm, 'git'
