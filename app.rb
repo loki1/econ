@@ -4,4 +4,14 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 
-get('/') {haml :index}
+enable :sessions
+
+get('/') {haml :login}
+
+post "/login" do
+	session['name'] = params[:name]
+	
+	redirect '/index'
+end
+
+get('/index') {haml :index}
