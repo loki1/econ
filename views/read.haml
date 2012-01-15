@@ -1,0 +1,14 @@
+%link(rel="stylesheet" href="codemirror.css")
+%script(src="codemirror.js")
+%script(src="xml.js")
+:css
+  .CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
+
+%textarea#code{:name => "content"}=@victim.content
+
+%script
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  mode: {name: "xml", alignCDATA: true},
+  lineNumbers: true,
+  readOnly: true
+  });

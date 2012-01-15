@@ -1,0 +1,16 @@
+%link(rel="stylesheet" href="codemirror.css")
+%script(src="codemirror.js")
+%script(src="xml.js")
+:css
+  .CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
+
+%form{:method => "post", :action => "/edit"}
+  %textarea#code{:name => "content"}=@victim.content
+  %br
+  %input{:type => "submit"}
+
+%script
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  mode: {name: "xml", alignCDATA: true},
+  lineNumbers: true
+  });
