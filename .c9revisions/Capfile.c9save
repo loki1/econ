@@ -1,0 +1,1 @@
+{"ts":1353312470604,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"load 'deploy' if respond_to?(:namespace) # cap2 differentiator\nload 'config/deploy'"]],"start1":0,"start2":0,"length1":0,"length2":83}]],"length":83}
